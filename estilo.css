@@ -1,0 +1,706 @@
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 10px;
+}
+.bar {
+  width: 30px;
+  height: 3px;
+  background-color: #ffffff;
+  margin: 3px 0;
+}
+.show-menu .menu-toggle {
+  display: block;
+}
+
+.show-menu #menu {
+  display: block;
+}
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+  .containers-pai5 a {
+    display:none;
+   
+  }
+
+}
+
+
+.my-class {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  margin-left: -60px;
+  margin-top: 10px;
+  display: block;
+}
+
+.profile-icon {
+  float: right;
+  margin-left:300px;
+}
+.image-container {
+  display: inline-block;
+  
+}
+
+.recomendados {
+  flex-basis: 100%;
+}
+
+.containers-pai5{
+  display: flex;
+  overflow: hidden; /* Esconde o overflow, incluindo horizontal e vertical */
+  scroll-behavior: smooth; /* Aplica a rolagem suave ao contêiner pai */
+  width: 90%; /* Ajuste a largura para ocupar toda a largura disponível */
+  
+
+  }
+
+  .containers-pai5 a {
+    font-family: 'Quicksand', sans-serif; /* Definindo a fonte */
+    margin-left: 11px;
+    font-size: 18px; /* Tamanho da fonte */
+    padding: 1px;
+    margin-top: 8px;
+   
+  }
+
+.header {
+  position: relative;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  color: rgb(17, 16, 16);
+  background-color: rgba(2, 2, 2, 0); /* Define um fundo preto com 50% de transparência */
+  z-index: 2; /* Aumenta o valor do z-index para o header */
+  }
+
+
+
+.flex-container {
+  display: flex;
+  gap: 10px;
+}
+
+.header img {
+  margin-right: 15%;
+}
+.dupla {
+  display: none; /* Esconde todas as divs inicialmente */
+}
+
+.bolinhas-container {
+  text-align: center;
+}
+
+.retangulo-preto3-container {
+  position: relative;
+ 
+  top:10px;
+  flex: 0 0 100%; /* Para manter o mesmo tamanho dos contêineres */
+  }
+
+
+.seta {
+  position: absolute;
+  top: 50%; /* Ajuste o valor aqui para mover a bola preta para baixo */
+  right: -25px;
+  transform: translateY(-50%);
+  width: 80px;
+  height: 80px;
+  border-radius: 80%;
+  cursor: pointer;
+  z-index: 2;
+}
+
+
+.seta-esquerda {
+  position: absolute;
+  top: 50%; /* Ajuste a posição vertical conforme necessário */
+  left: 20px; /* Ajuste a posição horizontal conforme necessário */
+  transform: translate(-50%, -50%) rotate(-48deg);; /* Rotação para apontar para a esquerda */
+  width: 15px;
+  height: 15px;
+  border-top: 3px solid white;
+  border-left: 3px solid white; /* Use border-left ao invés de border-right para a seta apontar para a esquerda */
+}
+
+
+.seta::after {
+  content: "";
+  position: absolute;
+  top: 40%;
+  right: 39px;
+  transform: translate(-50%, -50%);
+  width: 15px;
+  height: 15px;
+  border-top: 3px solid white;
+  border-right: 3px solid white;
+  transform: rotate(45deg);
+}
+
+
+.outra-secao {
+  display: none;
+}
+
+.outra-secao.mostrar {
+  display: block;
+}
+
+
+.bolinha {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: rgb(255, 254, 254);
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.header a {
+  margin-right: 30px;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.5s, font-weight 0.3s;
+  font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+.popup-arrow {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+
+
+.popup-content {
+  position: absolute;
+  display: none;
+  background: linear-gradient(to right,rgb(4, 4, 24), rgb(6, 1, 19), #160130);
+  padding: 10px;
+  width: 200px;
+  border: 1px solid black;
+  border-radius: 5px;
+  top: 30px;
+  left: -90px;
+}
+
+
+.popup-arrow:hover .popup-content {
+  display: block;
+}
+.popup-box {
+  display: block;
+  position: absolute;
+  background: black;
+  color: rgb(8, 8, 8);
+  padding: 12px;
+  top: 60px;
+  right: 82px; /* Posiciona à direita */
+  z-index: 999;
+  font-family: Arial, sans-serif; /* Exemplo de fonte: Arial */
+  
+}
+.popup-box a {
+  display: block;
+  margin-bottom: 5px;
+  color: white;
+  text-decoration: none;
+  line-height: 1.9;
+  white-space: nowrap; /* Impede a quebra de linha */
+}
+
+.popup-box a:hover {
+  text-decoration: none; 
+  vertical-align: middle;
+}
+
+.profile-button:hover + .popup-box {
+  display: block;
+}
+
+.black-box {
+  background: black;
+  color: white;
+  padding: 8px;
+  width: 130px;
+  height: 170px;
+}
+
+.header a:hover {
+  color: rgb(194, 189, 189);
+  
+  transition: transform 0.8s ease;
+}
+.header a:hover img {
+  filter: brightness(500%);
+}
+
+@media (max-width: 768px) {
+  /* Ajuste o tamanho da fonte, margens, paddings, larguras, etc. para dispositivos menores */
+  body {
+    font-size: 15px; /* Exemplo de ajuste no tamanho da fonte */
+    padding: 5px; /* Exemplo de ajuste no espaçamento do header */
+    width: 100%; /* Reduz a largura do corpo da página */
+    margin: 0 auto; /* Centraliza o conteúdo horizontalmente */
+  }
+ 
+  h2 {
+    margin-bottom: -75px; /* Ajuste o valor conforme necessário para reduzir o espaço inferior */
+  }
+  .header {
+    padding: 8px; /* Exemplo de ajuste no espaçamento do header */
+  }
+  .containers-pai5{
+    padding: 8px; /* Ajuste a largura para ocupar a tela inteira */
+    /* Outros ajustes de estilo conforme necessário */
+  }
+  /* Ajuste a largura dos contêineres, imagens, elementos, etc. conforme necessário */
+  .containers-pai6 {
+    width: 50%; /* Ajuste a largura para ocupar a tela inteira */
+    /* Outros ajustes de estilo conforme necessário */
+  }
+  
+  /* Oculte ou ajuste elementos que você deseja esconder ou alterar em telas menores */
+  .menu-toggle {
+    display: flex; /* Por exemplo, exiba o menu hambúrguer */
+  }
+  
+  .containers-pai5 a {
+    display: none; /* Por exemplo, oculte links do menu */
+  }
+  
+ 
+}
+
+.body {
+  background: linear-gradient(to right,rgb(4, 4, 24), rgb(6, 1, 19), #160130);
+  margin: 0;
+  padding: 12;
+  
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.dupla {
+  flex-basis: 50%;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+
+.dupla img {
+  width: 100%;
+  height: auto;
+}
+.containers-pai {
+  display: flex;
+  overflow: hidden; /* Esconde o overflow, incluindo horizontal e vertical */
+  scroll-behavior: smooth; /* Aplica a rolagem suave ao contêiner pai */
+  width: 100%; /* Ajuste a largura para ocupar toda a largura disponível */
+}
+.containers-pai .retangulo-preto3-container {
+  margin-right: 60px; /* Ajuste o valor conforme necessário */
+}
+
+.containers-pai-1 {
+  display: flex;
+  overflow: hidden; /* Esconde o overflow, incluindo horizontal e vertical */
+  scroll-behavior: smooth; /* Aplica a rolagem suave ao contêiner pai */
+  width: 100%; /* Ajuste a largura para ocupar toda a largura disponível */
+}
+
+.containers-pai-2 {
+  display: flex;
+  overflow: hidden; /* Esconde o overflow, incluindo horizontal e vertical */
+  scroll-behavior: smooth; /* Aplica a rolagem suave ao contêiner pai */
+  width: 100%; /* Ajuste a largura para ocupar toda a largura disponível */
+}
+
+.containers-pai-3 {
+  display: flex;
+  overflow: hidden; /* Esconde o overflow, incluindo horizontal e vertical */
+  scroll-behavior: smooth; /* Aplica a rolagem suave ao contêiner pai */
+  width: 100%; /* Ajuste a largura para ocupar toda a largura disponível */
+}
+
+.containers-pai-4{
+  display: flex;
+  flex-direction: row;
+
+}
+
+.containers-pai-5{
+  display: flex;
+  overflow: hidden; /* Esconde o overflow, incluindo horizontal e vertical */
+  scroll-behavior: smooth; /* Aplica a rolagem suave ao contêiner pai */
+  width: 100%; /* Ajuste a largura para ocupar toda a largura disponível */
+}
+ 
+
+
+
+.containers-pai6 {
+  display: flex;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  width: 50%;
+  
+}
+
+@media (max-width: 768px) {
+ 
+  .image-container2 img {
+    width: 130px; /* Defina o tamanho fixo que deseja */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block;
+    margin-left: -35px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+  }
+}
+.image-container2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  max-width: 200px; /* Largura fixa para a imagem */
+  margin-left: 30px; /* Ajuste a margem à esquerda conforme necessário */
+}
+
+
+
+.container1, .container2, .container3{
+  width: 100%;
+  height: 200px; /* Ajuste este valor conforme necessário */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.container4{
+  width: 100%;
+  height: 340px; /* Ajuste este valor conforme necessário */
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.container5{
+  width: 100%;
+  height: 340px; /* Ajuste este valor conforme necessário */
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+
+
+.div-performance {
+  display: flex;
+  flex-direction: row;
+}
+
+
+.seta1 {
+  position: absolute;
+  top: 50%; /* Ajuste o valor aqui para mover a bola preta para baixo */
+  right: -15px;
+  transform: translateY(-50%);
+  width: 80px;
+  height: 80px;
+  border-radius: 80%;
+  cursor: pointer;
+  z-index: 2;
+}
+
+
+
+
+
+.seta1::after {
+  content: "";
+  position: absolute;
+  top: 40%;
+  right: 39px;
+  transform: translate(-50%, -50%);
+  width: 15px;
+  height: 15px;
+  border-top: 3px solid white;
+  border-right: 3px solid white;
+  transform: rotate(45deg);
+}
+
+.dupla1 {
+  flex-basis: 25%;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.dupla1 img {
+  width: 92%;
+  height: auto;
+  transition: transform 0.5s ease;
+}
+
+.image-effect {
+  display: inline-block;
+  position: relative;
+  overflow: hidden; /* Garante que a imagem não "transborde" quando crescer */
+  transition: transform 0.3s ease; /* Efeito de transição suave */
+}
+
+.image-effect img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Efeito de crescimento quando passa o mouse */
+.image-effect:hover {
+  transform: scale(1.2); /* Aumenta a escala da imagem */
+  
+}
+.image-border {
+  border: 3px solid white;
+}
+
+.retangulo-preto3-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  
+}
+
+.retangulo-preto4-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  
+}
+
+
+.div-performance {
+  display: flex;
+  flex-direction: row;
+}
+
+.div-performance h2 {
+  font-size: 28px;
+  margin-left: -30px; /* Ajuste o valor negativo para mover o h2 para a esquerda */
+}
+
+.dupla5 {
+  flex: 1; /* Isso faz com que as divs tenham a mesma largura */
+  padding: 10px; /* Adicione algum espaço entre as divs */
+  box-sizing: border-box; /* Certifica-se de que o espaço acolchoado não afeta a largura total */
+  overflow: hidden; /* Garante que a imagem não "transborde" quando crescer */
+  transition: transform 0.3s; /* Adiciona uma transição suave ao efeito de aumento */
+  margin-left: 10px;
+}
+
+.dupla5:hover {
+  transform: scale(1.1); /* Aumenta o tamanho da div quando o mouse está sobre ela */
+}
+
+.dupla5 img {
+  max-width: 75%; /* Certifique-se de que a imagem não exceda a largura da div */
+  height: auto; /* Mantém a proporção da imagem */
+  display: block; /* Remove espaços em branco extras abaixo da imagem */
+  position:relative;
+ 
+}
+.retangulo-preto {
+  background-color: rgb(17, 16, 16);
+  width: 100%;
+  height: 80px;
+  padding: 60px;
+}
+
+.retangulo-preto2 {
+  background-color: rgb(8, 3, 49);
+  width: 900px;
+  height: 500px;
+  padding: 60px;
+  margin-bottom: 15px;
+}
+
+.retangulo-preto3 {
+  background-color: rgb(8, 3, 49);
+  width: 700px;
+  height: 500px;
+  padding: 60px;
+  overflow-x: scroll;
+    white-space: nowrap;
+}
+
+.retangulo-preto4 {
+  background-color: rgb(211, 211, 212);
+  width: 1150px;
+  height: 90px;
+  padding: 60px;
+}
+
+.retangulo-preto5 {
+  background-color: rgb(7, 4, 22);
+  width: 1200px;
+  height: 90px;
+  padding: 90px;
+  margin-left: -10px;
+}
+
+
+
+    .profile-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 120px; /* Ajuste a largura conforme necessário */
+      height: 40px;  
+      overflow: hidden;
+      margin-left: 350px; /* Adicione margem à esquerda para separar dos outros elementos do .header */
+      position: relative;
+    }
+    
+    .profile-button img {
+      width: 30px;
+      height: 30px;
+      object-fit: cover;
+      margin-right: 5px; /* Espaçamento entre a imagem e o nome do perfil */
+    }
+    
+    .profile-button .profile-name {
+      font-size: 14px;
+      color: #ffffff;
+      display: inline-block; /* Adicione esta linha para permitir que o span ocupe espaço horizontalmente */
+    }
+    
+    /* Estilização específica para a seta no botão do perfil */
+.profile-button .arrow-down {
+  position: absolute;
+  right: 10px; /* Posiciona a seta para baixo no canto direito */
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #ffffff; /* Cor da seta (branco) */
+  top: calc(50% - 2.5px); /* Centraliza verticalmente a seta */
+}
+
+
+h2 {
+  color: rgb(255, 255, 255);
+  padding: 16px;
+  margin: right 5px;
+}
+
+
+.container-images {
+  display: flex;
+  align-items: flex-end;
+}
+
+.hidden-image {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  opacity: 0.5; /* Ajuste a opacidade conforme desejado */
+}
+#imagem {
+  width: 100%; /* A imagem ocupará 100% da largura disponível */
+  height: auto; /* A altura será ajustada automaticamente proporcionalmente à largura */
+}
+
+/* Estilo do footer */
+footer {
+  background: linear-gradient(to right,rgb(4, 4, 24), rgb(6, 1, 19), #160130);
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-section {
+  margin-right: 30px;
+}
+
+.footer-section h4 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section li {
+  margin-bottom: 8px;
+}
+
+.footer-section a {
+  color: #ffffffa1;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  color: #555;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #888;
+}
+h4{
+  color: #ffffff;
+}
+
+  #imagem {
+    opacity: 1;
+    transition: transform 0.5s ease; /* Efeito de escala */
+  }
+
+  .bolinha.active {
+    /* ... (seu código CSS existente para as bolinhas ativas) */
+  }
+
+  .bolinha {
+    /* ... (seu código CSS existente para as bolinhas) */
+    transform-origin: center center; /* Definir o ponto de origem da escala no centro da bolinha */
+  }
+
+  .bolinha.active {
+    /* Adicionar escala de 1.2 (20% maior) para a bolinha ativa */
+    transform: scale(1.2);
+  }
+
+
+
+
